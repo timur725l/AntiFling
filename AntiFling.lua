@@ -17,8 +17,6 @@ local function startTracking(character)
         end
 
         local currentPos = rootPart.Position
-        
-        -- 1. Жёсткий контроль скорости (Не дает улететь даже на метр)
         if rootPart.Velocity.Magnitude > MAX_VELOCITY then
             rootPart.Velocity = Vector3.new(0, 0, 0)
         end
